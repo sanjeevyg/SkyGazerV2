@@ -1,0 +1,1186 @@
+body {
+    height: 100vh;
+    background: radial-gradient(#202224 0%, black 100%);
+    background-attachment:fixed;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: De-Valencia;
+    src: url(/De-Valencia.otf);
+}
+
+nav {
+    /* background: #888E96; */
+    position: relative;
+    text-align: left;
+    font-family: De-Valencia;
+    font-size: 20px;
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 20;
+}
+
+
+
+nav#navigationBar ul {
+    display: inline-flex;
+    list-style: none;
+    color: White;
+    cursor: pointer;
+}
+
+#home {
+    text-decoration: underline;
+}
+
+
+.sign-up {
+    display: inline-flex;
+    list-style: none;
+    color: White;
+}
+
+
+nav#navigationBar ul li {
+    width: 120px;
+    margin: 5px;
+    padding: 15px;
+}
+
+.active li:hover {
+    background: grey;
+    border-radius: 3px;
+}
+
+.sign-up li:hover {
+    background: grey;
+    border-radius: 3px;
+}
+
+ .introduction {
+    /* background: red; */
+    /* position: absolute; */
+    z-index: 1;
+    font-family: De-Valencia;
+    font-size: 15px;
+    padding-left: 20px;
+    margin-top: 0px;
+    width: 400px;
+    display: inline-block;
+    padding-left: 60px;
+    color: white;
+}
+
+.search-form {
+    padding: 17px;
+    padding-right: 40px;
+    font-family: De-Valencia;
+}
+
+ #nasa-daily-video img {
+     margin-top: 30px;
+     width: 400px;
+     height: auto;
+     border: 1px solid rgb(225, 211, 211);
+     box-shadow: 0 0 10px 0px rgba(126, 117, 117, 0.5)
+ }
+
+ #nasa-daily-video {
+     display: inline-block;
+     color: white;
+     text-align: center;
+     font-size: 10px;
+}
+
+ .introduction h1 {
+     font-size: 23px;
+ }
+
+ .fa {
+     padding: 5px;
+ }
+
+.signup-form-container {
+     display: none;
+ }
+
+.login-form-container {
+    display: none;
+}
+
+#sign-up-list:hover .signup-form-container {
+    display: block;
+    position: absolute;
+    background: grey;
+ }
+
+ #login-list:hover .login-form-container {
+    display: block;
+    position: absolute;
+    background: grey;
+    transition-delay:1s;
+ }
+
+ #log-in-popup {
+     background: grey;
+     padding: 20px;
+     transform: scale(0);
+     margin-bottom: 100px;
+     margin-top: 0px;
+     text-align: center;
+     font-size: 15px;
+ }
+
+
+ #sign-up-list:hover .signup-form-container #new-account input {
+     display: block;
+     margin: 30px;
+     z-index: 15;
+     transition-delay:1s;
+ }
+
+ #login-list:hover .login-form-container #login-user input {
+    display: block;
+    margin: 30px;
+    z-index: 15;
+    transition-delay:1s;
+}
+
+#login-list:hover .login-form-container #login-user button {
+    display: block;
+    margin: 30px;
+    z-index: 15;
+    transition-delay:1s;
+}
+
+/* ..................................................................... */
+.planets-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.planet:hover {
+    cursor: pointer;
+}
+.sun:hover {
+   cursor: pointer;
+}
+.planet-info {
+   margin-top: 170px;
+   font-family: De-Valencia;
+   font-size: 30px;
+   color: white;
+   width: 300px;
+   margin-right: 0px;
+   padding-right: 40px;
+}
+.pop-up {
+    position: fixed;
+    z-index: 10;
+    /* background: grey; */
+    transform: scale(0);
+}
+.pop-header {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding-bottom: 20px;
+}
+.pop-body {
+    font-size: 20px;
+}
+.pop-body div {
+    padding: 10px;
+}
+
+.close-button {
+    cursor: pointer;
+}
+.nasa-image {
+    padding: 5px;
+}
+
+/* ...................................................................... */
+
+.body-frame {
+    display: flex;
+    flex-direction: column;
+}
+
+.planet-link {
+    position: static;
+    font-family: De-Valencia;
+    display: flex;
+    /* background: red; */
+    color: white; 
+    /* width: 400px; */
+    flex-direction: row;
+    margin-left: 60px;
+    justify-content: center;
+    padding-top: 0px;
+    font-size: 15px
+}
+
+#planet-group-1 {
+padding-bottom: 20px;
+padding-top: 0px;
+margin-top: 0px;
+text-align: left;
+    /* padding-right: 130px; */
+    /* border-right: 2px solid white; */
+}
+
+#planet-group-1 div {
+    padding: 20px;
+    padding-left: 0px;
+    display: inline-block;
+}
+
+/* #planet-group-2 {
+    padding-left: 0px;
+    margin-right: 0px;
+    text-align: left;
+}
+
+#planet-group-2 div {
+    padding: 5px;
+    padding-left: 0px;
+    display: inline-block;
+} */
+
+#planet-group-1 div:hover {
+    font-size: 25px;
+    cursor: pointer; 
+}
+
+/* #planet-group-2 div:hover {
+    font-size: 25px;
+    cursor: pointer; 
+} */
+ 
+/* ...................................................................... */
+.planet, .star, .orbit, .moon-orbit{
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    top: calc(50% - var(--size)/2);
+    left: calc(50% - var(--size)/2);
+    border-radius: 50%;
+}
+
+.sun {
+    --size: 50px;
+    background: linear-gradient(#d02411 0%, yellow 60%, #d05a11 100% );
+    box-shadow: 0 0 25px rgba(255, 255, 0, 0.482);
+    animation: sun 3s infinite linear;
+}
+
+.planet {
+    position: absolute;
+    z-index: 1;
+}
+.orbit {
+    position: absolute;
+    z-index: -1;
+}
+
+.mercury {
+    --size: 4px;
+    background: rgb(86, 242, 232);
+    animation: mercury 4s infinite linear;
+}
+
+.venus {
+    --size: 9px;
+    background: rgb(249, 217, 205);
+    animation: venus 12s infinite linear;
+}
+
+.earth {
+    --size: 10px;
+    background: cornflowerblue;
+    animation: earth 20s infinite linear;
+}
+
+#moon {
+    /* position: absolute; */
+    --size: 3px;
+    background: rgb(252, 251, 252);
+    animation: moon 1.66s infinite linear;
+}
+
+.mars {
+    --size: 7px;
+    background: crimson;
+    animation: mars 38s infinite linear;
+}
+
+#mars-moon1 {
+    /* position: absolute; */
+    --size: 2px;
+    background: rgb(252, 251, 252);
+    animation: mars-moon 1.66s infinite linear;
+}
+
+#mars-moon2 {
+    /* position: absolute; */
+    --size: 2px;
+    background: rgb(185, 103, 52);
+    animation: mars-moon 1.2s infinite linear;
+}
+
+.jupiter {
+    --size: 25px;
+    background: linear-gradient(#f7f5f5 0%, brown 60%, #d3936c 80%, white 80% );
+    animation: jupiter 237s infinite linear;
+}
+
+#jupiter-moon1 {
+    /* position: absolute; */
+    --size: 3px;
+    background: rgb(251, 251, 252);
+    animation: jupiter-moon 1.4s infinite linear;
+}
+
+#jupiter-moon2 {
+    /* position: absolute; */
+    --size: 4px;
+    background: rgb(86, 255, 255);
+    animation: jupiter-moon 1.2s infinite linear;
+}
+
+#jupiter-moon3 {
+    /* position: absolute; */
+    --size: 3px;
+    background: rgb(255, 209, 109);
+    animation: jupiter-moon .8s infinite linear;
+}
+
+#jupiter-moon4 {
+    /* position: absolute; */
+    --size: 2px;
+    background: rgb(255, 209, 109);
+    animation: jupiter-moon 1s infinite linear;
+}
+
+
+.saturn {
+    --size: 20px;
+    background: peru;
+    animation: saturn 591s infinite linear;
+}
+
+.saturn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -35%;
+    width: 180%;
+    height: 10%;
+    border-top: 2px solid white;
+    /* border-top: 0; */
+    border-radius: 50%;
+    /* transform: saturn translate(-50%, -50%); */
+}
+
+.uranus {
+    --size: 14px;
+    background: rgb(124, 198, 244);
+    animation: uranus 1680s infinite linear;
+}
+
+#uranus-moon1 {
+    /* position: absolute; */
+    --size: 2px;
+    background: rgb(251, 251, 252);
+    animation: uranus-moon .7s infinite linear;
+}
+
+#uranus-moon2 {
+    /* position: absolute; */
+    --size: 1.5px;
+    background: rgb(86, 255, 255);
+    animation: uranus-moon .8s infinite linear;
+}
+
+#uranus-moon3 {
+    /* position: absolute; */
+    --size: 2px;
+    background: rgb(255, 209, 109);
+    animation: uranus-moon .9s infinite linear;
+}
+
+#neptune-moon1 {
+    /* position: absolute; */
+    --size: 2px;
+    background: rgb(255, 209, 109);
+    animation: neptune-moon 1.2s infinite linear;
+}
+
+#neptune-moon2 {
+    /* position: absolute; */
+    --size: 2px;
+    background: rgb(249, 41, 41);
+    animation: neptune-moon 1.5s infinite linear;
+}
+
+.neptune {
+    --size: 14px;
+    background: rgb(37, 67, 157);
+    animation: neptune 3280s infinite linear;
+}
+
+.pluto {
+    --size: 4px;
+    top: calc(47% - var(--size)/2);
+    left: calc(55% - var(--size)/2);
+    background: rgb(255, 69, 249);
+    animation: pluto 4996s infinite linear;
+}
+/* .................................................................................................. */
+.asteroid1, .asteroid2, .asteroid3, .asteroid4, .asteroid5, .asteroid6, .asteroid7, .asteroid8, .asteroid9, .asteroid10, .asteroid11, .asteroid12, .asteroid13, .asteroid14, 
+.asteroid15, .asteroid16, .asteroid17, .asteroid18, .asteroid19, .asteroid20, .asteroid21, .asteroid22, .asteroid23, .asteroid24, .asteroid25, .asteroid26, .asteroid27, .asteroid28 {
+    --size: 1px;
+    background: white;
+}
+
+.asteroid1 {
+    animation: asteroid1 56s infinite linear;
+}
+
+.asteroid2 {
+    animation: asteroid2 56s infinite linear;
+}
+
+.asteroid3 {
+    animation: asteroid3 56s infinite linear;
+}
+
+.asteroid4 {
+    animation: asteroid4 56s infinite linear;
+}
+
+.asteroid5 {
+    animation: asteroid5 56s infinite linear;
+}
+
+.asteroid6 {
+    animation: asteroid6 56s infinite linear;
+}
+
+.asteroid7 {
+    animation: asteroid7 56s infinite linear;
+}
+
+.asteroid8 {
+    --size: 2px;
+    animation: asteroid8 56s infinite linear;
+}
+
+.asteroid9 {
+    animation: asteroid9 56s infinite linear;
+}
+
+.asteroid10 {
+    animation: asteroid10 56s infinite linear;
+}
+
+.asteroid11 {
+    --size: 2px;
+    animation: asteroid11 56s infinite linear;
+}
+
+.asteroid12 {
+    --size: 2px;
+    animation: asteroid12 56s infinite linear;
+}
+
+.asteroid13 {
+    --size: 2px;
+    animation: asteroid13 40s infinite linear;
+}
+
+.asteroid14 {
+    --size: 2px;
+    animation: asteroid14 40s infinite linear;
+}
+
+.asteroid15 {
+    animation: asteroid15 56s infinite linear;
+}
+
+.asteroid16 {
+    animation: asteroid16 56s infinite linear;
+}
+
+.asteroid17 {
+    --size: 2px;
+    animation: asteroid17 56s infinite linear;
+}
+
+.asteroid18 {
+    --size: 2px;
+    animation: asteroid18 56s infinite linear;
+}
+
+.asteroid19 {
+    --size: 2px;
+    animation: asteroid19 40s infinite linear;
+}
+
+.asteroid20 {
+    --size: 2px;
+    animation: asteroid20 40s infinite linear;
+}
+
+.asteroid21 {
+    animation: asteroid21 56s infinite linear;
+}
+
+.asteroid22 {
+    animation: asteroid22 56s infinite linear;
+}
+
+.asteroid23 {
+    --size: 2px;
+    animation: asteroid23 56s infinite linear;
+}
+
+.asteroid24 {
+    --size: 2px;
+    animation: asteroid24 56s infinite linear;
+}
+
+.asteroid25 {
+    --size: 2px;
+    animation: asteroid25 40s infinite linear;
+}
+
+.asteroid26 {
+    --size: 2px;
+    animation: asteroid26 40s infinite linear;
+}
+
+
+@keyframes asteroid1 {
+    from {
+        transform: rotate(0) translateX(120px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(120px)
+    }
+}
+
+@keyframes asteroid2 {
+    from {
+        transform: rotate(-30deg) translateX(130px)
+    }
+    to {
+        transform: rotate(-720deg) translateX(130px)
+    }
+}
+
+@keyframes asteroid3 {
+    from {
+        transform: rotate(-60deg) translateX(122px)
+    }
+    to {
+        transform: rotate(-400deg) translateX(122px)
+    }
+}
+
+@keyframes asteroid4 {
+    from {
+        transform: rotate(-60deg) translateX(140px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(140px)
+    }
+}
+
+@keyframes asteroid5 {
+    from {
+        transform: rotate(-160deg) translateX(120px)
+    }
+    to {
+        transform: rotate(-500deg) translateX(120px)
+    }
+}
+
+@keyframes asteroid6 {
+    from {
+        transform: rotate(-200deg) translateX(110px)
+    }
+    to {
+        transform: rotate(-380deg) translateX(110px)
+    }
+}
+
+@keyframes asteroid7 {
+    from {
+        transform: rotate(-300deg) translateX(135px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(135px)
+    }
+}
+
+@keyframes asteroid8 {
+    from {
+        transform: rotate(-50deg) translateX(160px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(160px)
+    }
+}
+
+@keyframes asteroid9 {
+    from {
+        transform: rotate(-180deg) translateX(115px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(115px)
+    }
+}
+
+@keyframes asteroid10 {
+    from {
+        transform: rotate(-90deg) translateX(133px)
+    }
+    to {
+        transform: rotate(-396deg) translateX(133px)
+    }
+}
+
+@keyframes asteroid11 {
+    from {
+        transform: rotate(-160deg) translateX(111px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(111px)
+    }
+}
+
+@keyframes asteroid12 {
+    from {
+        transform: rotate(-200deg) translateX(110px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(110px)
+    }
+}
+
+@keyframes asteroid13 {
+    from {
+        transform: rotate(-80deg) translateX(100px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(100px)
+    }
+}
+
+@keyframes asteroid14 {
+    from {
+        transform: rotate(-20deg) translateX(166px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(166px)
+    }
+}
+
+@keyframes asteroid15 {
+    from {
+        transform: rotate(-180deg) translateX(168px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(168px)
+    }
+}
+@keyframes asteroid16 {
+    from {
+        transform: rotate(-80deg) translateX(133px)
+    }
+    to {
+        transform: rotate(-396deg) translateX(133px)
+    }
+}
+
+@keyframes asteroid17 {
+    from {
+        transform: rotate(-166deg) translateX(131px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(131px)
+    }
+}
+
+@keyframes asteroid18 {
+    from {
+        transform: rotate(-202deg) translateX(103px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(103px)
+    }
+}
+
+@keyframes asteroid19 {
+    from {
+        transform: rotate(-40deg) translateX(100px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(100px)
+    }
+}
+
+@keyframes asteroid20 {
+    from {
+        transform: rotate(-20deg) translateX(166px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(166px)
+    }
+}
+
+@keyframes asteroid21 {
+    from {
+        transform: rotate(-133deg) translateX(152px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(152px)
+    }
+}
+
+@keyframes asteroid22 {
+    from {
+        transform: rotate(-119deg) translateX(137px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(137px)
+    }
+}
+
+@keyframes asteroid23 {
+    from {
+        transform: rotate(-202deg) translateX(117px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(117px)
+    }
+}
+
+@keyframes asteroid24 {
+    from {
+        transform: rotate(-40deg) translateX(156px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(156px)
+    }
+}
+
+@keyframes asteroid25 {
+    from {
+        transform: rotate(-20deg) translateX(144px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(144px)
+    }
+}
+
+@keyframes asteroid26 {
+    from {
+        transform: rotate(-188deg) translateX(160px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(160px)
+    }
+}
+
+
+/* ............................................................................................................................. */
+@keyframes sun {
+    from {
+        transform: rotate(0) translateX(0)
+    }
+    to {
+        transform: rotate(360deg) translateX(0)
+    }
+}
+
+
+ @keyframes mercury {
+    from {
+        transform: rotate(0) translateX(35px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(35px)
+    }
+}
+
+@keyframes venus {
+    from {
+        transform: rotate(0) translateX(50px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(50px)
+    }
+}
+
+@keyframes earth {
+    from {
+        transform: rotate(0) translateX(72.5px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(72.5px)
+    }
+}
+@keyframes moon {
+    from {
+        transform: rotate(0) translateX(9px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(9px)
+    }
+}
+
+@keyframes mars {
+    from {
+        transform: rotate(0) translateX(95px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(95px)
+    }
+}
+
+@keyframes mars-moon {
+    from {
+        transform: rotate(0) translateX(7px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(7px)
+    }
+}
+
+@keyframes jupiter {
+    from {
+        transform: rotate(0) translateX(170px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(170px)
+    }
+}
+
+@keyframes jupiter-moon {
+    from {
+        transform: rotate(0) translateX(17px)
+    }
+    to {
+        transform: rotate(360deg) translateX(17px)
+    }
+}
+
+@keyframes saturn {
+    from {
+        transform: rotate(0) translateX(220px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(220px)
+    }
+}
+
+@keyframes uranus {
+    from {
+        transform: rotate(0) translateX(260px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(260px)
+    }
+}
+
+@keyframes uranus-moon {
+    from {
+        transform: rotate(0) translateX(12px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(12px)
+    }
+}
+
+@keyframes neptune {
+    from {
+        transform: rotate(0) translateX(315px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(315px)
+    }
+}
+
+@keyframes neptune-moon {
+    from {
+        transform: rotate(0) translateX(10px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(10px)
+    }
+}
+
+
+@keyframes pluto {
+    from {
+        transform: rotate(0) translateX(390px)
+    }
+    to {
+        transform: rotate(-360deg) translateX(390px)
+    }
+} 
+
+.orbit-mercury {
+    --size: 70px;
+    border: 1px solid rgb(35, 62, 80);
+}
+
+.orbit-venus {
+    --size: 100px;
+    border: 1px solid rgb(35, 62, 80);
+}
+
+.orbit-earth {
+    --size: 145px;
+    border: 1px solid rgb(35, 62, 80);
+}
+
+.orbit-mars {
+    --size: 190px;
+    border: 1px solid rgb(35, 62, 80);
+}
+
+.orbit-jupiter {
+    --size: 340px;
+    border: 1px solid rgb(23, 51, 70);
+}
+
+
+.orbit-saturn{
+    --size: 440px;
+    border: 1px solid rgb(35, 62, 80);
+}
+
+.orbit-uranus{
+    --size: 520px;
+    border: 1px solid rgb(35, 62, 80);
+}
+
+.orbit-neptune{
+    --size: 630px;
+    border: 1px solid rgb(35, 62, 80);
+}
+
+.orbit-pluto{
+    --size: 780px;
+    top: calc(47% - var(--size)/2);
+    left: calc(55% - var(--size)/2);
+    border: 1px solid rgb(35, 62, 80);
+}
+
+.orbit-asteroid { 
+    --size: 1px;
+    box-shadow: 72px 75px white, 150px 77px white, 88px 77px white, 70px 75px white, 120px 44px yellow, 100px 70px white, 120px 75px white, 150px 42px white, 113px 7px white, 111px 75px white, 133px 42px white, 
+    140px 70px white, 140px -50px white, 120px -80px white, 140px -30px white, 150px -25px white, 140px -70px white, 110px -60px white, 140px -55px white, 77px 75px white, 83px 42px white, 90px 70px white, -100px 90px white, 
+    -78px 70px white, 150px 70px white, -90px 70px white, 60px 80px white, -100px 23px white, -100px 33px white, -146px 56px white, -150px -65px white, -130px -65px white ; 
+     animation: asst 56s infinite linear;
+}
+
+
+@keyframes asst {
+    from {
+        transform: rotate(0) 
+    }
+    to {
+        transform: rotate(-360deg) 
+    }
+}
+
+#star-container {
+    position: absolute; 
+    z-index: -1;
+    top: 0px;
+}
+
+#stars1 {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    animation: 1s infinite linear;
+    box-shadow: 779px 1331px rgb(240, 234, 234), 324px 42px rgb(240, 234, 234), 303px 586px rgb(240, 234, 234),
+    1312px 276px rgb(240, 234, 234), 451px 625px rgb(240, 234, 234), 521px 1931px rgb(240, 234, 234), 1087px 1871px rgb(240, 234, 234),
+    36px 1546px rgb(240, 234, 234), 132px 934px rgb(240, 234, 234), 1698px 901px rgb(240, 234, 234), 1418px 664px rgb(240, 234, 234),
+    1448px 1157px rgb(240, 234, 234), 1084px 232px rgb(240, 234, 234), 347px 1776px rgb(240, 234, 234), 1722px 243px rgb(240, 234, 234),
+    1629px 835px rgb(240, 234, 234), 479px 969px rgb(240, 234, 234), 1231px 960px rgb(240, 234, 234), 586px 384px rgb(240, 234, 234),
+    164px 527px rgb(240, 234, 234), 8px 646px rgb(240, 234, 234), 1150px 1126px rgb(240, 234, 234), 665px 1357px rgb(240, 234, 234),
+    1556px 1982px rgb(240, 234, 234), 1260px 1961px rgb(240, 234, 234), 1675px 1741px rgb(240, 234, 234),
+    1843px 1514px rgb(240, 234, 234), 718px 1628px rgb(240, 234, 234), 242px 1343px rgb(240, 234, 234), 1497px 1880px rgb(240, 234, 234),
+    1364px 230px rgb(240, 234, 234), 1739px 1302px rgb(240, 234, 234), 636px 959px rgb(240, 234, 234), 304px 686px rgb(240, 234, 234),
+    614px 751px rgb(240, 234, 234), 1935px 816px rgb(240, 234, 234), 1428px 60px rgb(240, 234, 234), 355px 335px rgb(240, 234, 234),
+    1594px 158px rgb(240, 234, 234), 90px 60px rgb(240, 234, 234), 1553px 162px rgb(240, 234, 234), 1239px 1825px rgb(240, 234, 234),
+    1945px 587px rgb(240, 234, 234), 749px 1785px rgb(240, 234, 234), 1987px 1172px rgb(240, 234, 234), 1301px 1237px rgb(240, 234, 234),
+    1039px 342px rgb(240, 234, 234), 1585px 1481px rgb(240, 234, 234), 995px 1048px rgb(240, 234, 234), 524px 932px rgb(240, 234, 234),
+    214px 413px rgb(240, 234, 234), 1701px 1300px rgb(240, 234, 234), 1037px 1613px rgb(240, 234, 234), 1871px 996px rgb(240, 234, 234),
+    1360px 1635px rgb(240, 234, 234), 1110px 1313px rgb(240, 234, 234), 412px 1783px rgb(240, 234, 234), 1949px 177px rgb(240, 234, 234),
+    903px 1854px rgb(240, 234, 234), 700px 1936px rgb(240, 234, 234), 378px 125px rgb(240, 234, 234), 308px 834px rgb(240, 234, 234),
+    1118px 962px rgb(240, 234, 234), 1350px 1929px rgb(240, 234, 234), 781px 1811px rgb(240, 234, 234), 561px 137px rgb(240, 234, 234),
+    757px 1148px rgb(240, 234, 234), 1670px 1979px rgb(240, 234, 234), 343px 739px rgb(240, 234, 234), 945px 795px rgb(240, 234, 234),
+    576px 1903px rgb(240, 234, 234), 1078px 1436px rgb(240, 234, 234), 1583px 450px rgb(240, 234, 234), 1366px 474px rgb(240, 234, 234),
+    297px 1873px rgb(240, 234, 234), 192px 162px rgb(240, 234, 234), 1624px 1633px rgb(240, 234, 234), 59px 453px rgb(240, 234, 234),
+    82px 1872px rgb(240, 234, 234), 1933px 498px rgb(240, 234, 234), 1966px 1974px rgb(240, 234, 234), 1975px 1688px rgb(240, 234, 234),
+    779px 314px rgb(240, 234, 234), 1858px 1543px rgb(240, 234, 234), 73px 1507px rgb(240, 234, 234), 1693px 975px rgb(240, 234, 234),
+    1683px 108px rgb(240, 234, 234), 1768px 1654px rgb(240, 234, 234), 654px 14px rgb(240, 234, 234), 494px 171px rgb(240, 234, 234),
+    1689px 1895px rgb(240, 234, 234), 1660px 263px rgb(240, 234, 234), 1031px 903px rgb(240, 234, 234), 1203px 1393px rgb(240, 234, 234),
+    1333px 1421px rgb(240, 234, 234), 1113px 41px rgb(240, 234, 234), 1206px 1645px rgb(240, 234, 234), 1325px 1635px rgb(240, 234, 234),
+    142px 388px rgb(240, 234, 234), 572px 215px rgb(240, 234, 234), 1535px 296px rgb(240, 234, 234), 1419px 407px rgb(240, 234, 234),
+    1379px 1003px rgb(240, 234, 234), 329px 469px rgb(240, 234, 234), 1791px 1652px rgb(240, 234, 234), 935px 1802px rgb(240, 234, 234),
+    1330px 1820px rgb(240, 234, 234), 421px 1933px rgb(240, 234, 234), 828px 365px rgb(240, 234, 234), 275px 316px rgb(240, 234, 234),
+    707px 960px rgb(240, 234, 234), 1605px 1554px rgb(240, 234, 234), 625px 58px rgb(240, 234, 234), 717px 1697px rgb(240, 234, 234),
+    1669px 246px rgb(240, 234, 234), 1925px 322px rgb(240, 234, 234), 1154px 1803px rgb(240, 234, 234), 1929px 295px rgb(240, 234, 234),
+    1248px 240px rgb(240, 234, 234), 1045px 1755px rgb(240, 234, 234), 166px 942px rgb(240, 234, 234), 1888px 1773px rgb(240, 234, 234),
+    678px 1963px rgb(240, 234, 234), 1370px 569px rgb(240, 234, 234), 1974px 1400px rgb(240, 234, 234), 1786px 460px rgb(240, 234, 234),
+    51px 307px rgb(240, 234, 234), 784px 1400px rgb(240, 234, 234), 730px 1258px rgb(240, 234, 234), 1712px 393px rgb(240, 234, 234),
+    416px 170px rgb(240, 234, 234), 1797px 1932px rgb(240, 234, 234), 572px 219px rgb(240, 234, 234), 1557px 1856px rgb(240, 234, 234),
+    218px 8px rgb(240, 234, 234), 348px 1334px rgb(240, 234, 234), 469px 413px rgb(240, 234, 234), 385px 1738px rgb(240, 234, 234),
+    1357px 1818px rgb(240, 234, 234), 240px 942px rgb(240, 234, 234), 248px 1847px rgb(240, 234, 234), 1535px 806px rgb(240, 234, 234),
+    236px 1514px rgb(240, 234, 234), 1429px 1556px rgb(240, 234, 234), 73px 1633px rgb(240, 234, 234), 1398px 1121px rgb(240, 234, 234),
+    671px 1301px rgb(240, 234, 234), 1404px 1663px rgb(240, 234, 234), 740px 1018px rgb(240, 234, 234), 1600px 377px rgb(240, 234, 234),
+    785px 514px rgb(240, 234, 234), 112px 1084px rgb(240, 234, 234), 1915px 1887px rgb(240, 234, 234), 1463px 1848px rgb(240, 234, 234),
+    687px 1115px rgb(240, 234, 234), 1268px 1768px rgb(240, 234, 234), 1729px 1425px rgb(240, 234, 234),
+    1284px 1022px rgb(240, 234, 234), 801px 974px rgb(240, 234, 234), 1975px 1317px rgb(240, 234, 234), 1354px 834px rgb(240, 234, 234),
+    1446px 1484px rgb(240, 234, 234), 1283px 1786px rgb(240, 234, 234), 11px 523px rgb(240, 234, 234), 1842px 236px rgb(240, 234, 234),
+    1355px 654px rgb(240, 234, 234), 429px 7px rgb(240, 234, 234), 1033px 1128px rgb(240, 234, 234), 157px 297px rgb(240, 234, 234),
+    545px 635px rgb(240, 234, 234), 52px 1080px rgb(240, 234, 234), 827px 1520px rgb(240, 234, 234), 1121px 490px rgb(240, 234, 234),
+    9px 309px rgb(240, 234, 234), 1744px 1586px rgb(240, 234, 234), 1014px 417px rgb(240, 234, 234), 1534px 524px rgb(240, 234, 234),
+    958px 552px rgb(240, 234, 234), 1403px 1496px rgb(240, 234, 234), 387px 703px rgb(240, 234, 234), 1522px 548px rgb(240, 234, 234),
+    1355px 282px rgb(240, 234, 234), 1532px 601px rgb(240, 234, 234), 1838px 790px rgb(240, 234, 234), 290px 259px rgb(240, 234, 234),
+    295px 598px rgb(240, 234, 234), 1601px 539px rgb(240, 234, 234), 1561px 1272px rgb(240, 234, 234), 34px 1922px rgb(240, 234, 234),
+    1024px 543px rgb(240, 234, 234), 467px 369px rgb(240, 234, 234), 722px 333px rgb(240, 234, 234), 1976px 1255px rgb(240, 234, 234),
+    766px 983px rgb(240, 234, 234), 1582px 1285px rgb(240, 234, 234), 12px 512px rgb(240, 234, 234), 617px 1410px rgb(240, 234, 234),
+    682px 577px rgb(240, 234, 234), 1334px 1438px rgb(240, 234, 234), 439px 327px rgb(240, 234, 234), 1617px 1661px rgb(240, 234, 234),
+    673px 129px rgb(240, 234, 234), 794px 941px rgb(240, 234, 234), 1386px 1902px rgb(240, 234, 234), 37px 1353px rgb(240, 234, 234),
+    1467px 1353px rgb(240, 234, 234), 416px 18px rgb(240, 234, 234), 187px 344px rgb(240, 234, 234), 200px 1898px rgb(240, 234, 234),
+    1491px 1619px rgb(240, 234, 234), 811px 347px rgb(240, 234, 234), 924px 1827px rgb(240, 234, 234), 945px 217px rgb(240, 234, 234),
+    1735px 1228px rgb(240, 234, 234), 379px 1890px rgb(240, 234, 234), 79px 761px rgb(240, 234, 234), 825px 1837px rgb(240, 234, 234),
+    1980px 1558px rgb(240, 234, 234), 1308px 1573px rgb(240, 234, 234), 1488px 1726px rgb(240, 234, 234),
+    382px 1208px rgb(240, 234, 234), 522px 595px rgb(240, 234, 234), 1277px 1898px rgb(240, 234, 234), 354px 552px rgb(240, 234, 234),
+    161px 1784px rgb(240, 234, 234), 614px 251px rgb(240, 234, 234), 526px 1576px rgb(240, 234, 234), 17px 212px rgb(240, 234, 234),
+    179px 996px rgb(240, 234, 234), 467px 1208px rgb(240, 234, 234), 1944px 1838px rgb(240, 234, 234), 1140px 1093px rgb(240, 234, 234),
+    858px 1007px rgb(240, 234, 234), 200px 1064px rgb(240, 234, 234), 423px 1964px rgb(240, 234, 234), 1945px 439px rgb(240, 234, 234),
+    1377px 689px rgb(240, 234, 234), 1120px 1437px rgb(240, 234, 234), 1876px 668px rgb(240, 234, 234), 907px 1324px rgb(240, 234, 234),
+    343px 1976px rgb(240, 234, 234), 1816px 1501px rgb(240, 234, 234), 1849px 177px rgb(240, 234, 234), 647px 91px rgb(240, 234, 234),
+    1984px 1012px rgb(240, 234, 234), 1336px 1300px rgb(240, 234, 234), 128px 648px rgb(240, 234, 234), 305px 1060px rgb(240, 234, 234),
+    1324px 826px rgb(240, 234, 234), 1263px 1314px rgb(240, 234, 234), 1801px 629px rgb(240, 234, 234), 1614px 1555px rgb(240, 234, 234),
+    1634px 90px rgb(240, 234, 234), 1603px 452px rgb(240, 234, 234), 891px 1984px rgb(240, 234, 234), 1556px 1906px rgb(240, 234, 234),
+    121px 68px rgb(240, 234, 234), 1676px 1714px rgb(240, 234, 234), 516px 936px rgb(240, 234, 234), 1947px 1492px rgb(240, 234, 234),
+    1455px 1519px rgb(240, 234, 234), 45px 602px rgb(240, 234, 234), 205px 1039px rgb(240, 234, 234), 793px 172px rgb(240, 234, 234),
+    1562px 1739px rgb(240, 234, 234), 1056px 110px rgb(240, 234, 234), 1512px 379px rgb(240, 234, 234), 1795px 1621px rgb(240, 234, 234),
+    1848px 607px rgb(240, 234, 234), 262px 1719px rgb(240, 234, 234), 477px 991px rgb(240, 234, 234), 483px 883px rgb(240, 234, 234),
+    1239px 1197px rgb(240, 234, 234), 1496px 647px rgb(240, 234, 234), 1649px 25px rgb(240, 234, 234), 1491px 1946px rgb(240, 234, 234),
+    119px 996px rgb(240, 234, 234), 179px 1472px rgb(240, 234, 234), 1341px 808px rgb(240, 234, 234), 1565px 1700px rgb(240, 234, 234),
+    407px 1544px rgb(240, 234, 234), 1754px 357px rgb(240, 234, 234), 1288px 981px rgb(240, 234, 234), 902px 1997px rgb(240, 234, 234),
+    1755px 1668px rgb(240, 234, 234), 186px 877px rgb(240, 234, 234), 1202px 1882px rgb(240, 234, 234), 461px 1213px rgb(240, 234, 234),
+    1400px 748px rgb(240, 234, 234), 1969px 1899px rgb(240, 234, 234), 809px 522px rgb(240, 234, 234), 514px 1219px rgb(240, 234, 234),
+    374px 275px rgb(240, 234, 234), 938px 1973px rgb(240, 234, 234), 357px 552px rgb(240, 234, 234), 144px 1722px rgb(240, 234, 234),
+    1572px 912px rgb(240, 234, 234), 402px 1858px rgb(240, 234, 234), 1544px 1195px rgb(240, 234, 234), 667px 1257px rgb(240, 234, 234),
+    727px 1496px rgb(240, 234, 234), 993px 232px rgb(240, 234, 234), 1772px 313px rgb(240, 234, 234), 1040px 1590px rgb(240, 234, 234),
+    1204px 1973px rgb(240, 234, 234), 1268px 79px rgb(240, 234, 234), 1555px 1048px rgb(240, 234, 234), 986px 1707px rgb(240, 234, 234),
+    978px 1710px rgb(240, 234, 234), 713px 360px rgb(240, 234, 234), 407px 863px rgb(240, 234, 234), 461px 736px rgb(240, 234, 234),
+    284px 1608px rgb(240, 234, 234), 103px 430px rgb(240, 234, 234), 1283px 1319px rgb(240, 234, 234), 977px 1186px rgb(240, 234, 234),
+    1966px 1516px rgb(240, 234, 234), 1287px 1129px rgb(240, 234, 234), 70px 1098px rgb(240, 234, 234), 1189px 889px rgb(240, 234, 234),
+    1126px 1734px rgb(240, 234, 234), 309px 1292px rgb(240, 234, 234), 879px 764px rgb(240, 234, 234), 65px 473px rgb(240, 234, 234),
+    1003px 1959px rgb(240, 234, 234), 658px 791px rgb(240, 234, 234), 402px 1576px rgb(240, 234, 234), 35px 622px rgb(240, 234, 234),
+    529px 1589px rgb(240, 234, 234), 164px 666px rgb(240, 234, 234), 1876px 1290px rgb(240, 234, 234), 1541px 526px rgb(240, 234, 234),
+    270px 1297px rgb(240, 234, 234), 440px 865px rgb(240, 234, 234), 1500px 802px rgb(240, 234, 234), 182px 1754px rgb(240, 234, 234),
+    1264px 892px rgb(240, 234, 234), 272px 1249px rgb(240, 234, 234), 1289px 1535px rgb(240, 234, 234), 190px 1646px rgb(240, 234, 234),
+    955px 242px rgb(240, 234, 234), 1456px 1597px rgb(240, 234, 234), 1727px 1983px rgb(240, 234, 234), 635px 801px rgb(240, 234, 234),
+    226px 455px rgb(240, 234, 234), 1396px 1710px rgb(240, 234, 234), 849px 1863px rgb(240, 234, 234), 237px 1264px rgb(240, 234, 234),
+    839px 140px rgb(240, 234, 234), 1122px 735px rgb(240, 234, 234), 1280px 15px rgb(240, 234, 234), 1318px 242px rgb(240, 234, 234),
+    1819px 1148px rgb(240, 234, 234), 333px 1392px rgb(240, 234, 234), 1949px 553px rgb(240, 234, 234), 1878px 1332px rgb(240, 234, 234),
+    467px 548px rgb(240, 234, 234), 1812px 1082px rgb(240, 234, 234), 1067px 193px rgb(240, 234, 234), 243px 156px rgb(240, 234, 234),
+    483px 1616px rgb(240, 234, 234), 1714px 933px rgb(240, 234, 234), 759px 1800px rgb(240, 234, 234), 1822px 995px rgb(240, 234, 234),
+    1877px 572px rgb(240, 234, 234), 581px 1084px rgb(240, 234, 234), 107px 732px rgb(240, 234, 234), 642px 1837px rgb(240, 234, 234),
+    166px 1493px rgb(240, 234, 234), 1555px 198px rgb(240, 234, 234), 819px 307px rgb(240, 234, 234), 947px 345px rgb(240, 234, 234),
+    827px 224px rgb(240, 234, 234), 927px 1394px rgb(240, 234, 234), 540px 467px rgb(240, 234, 234), 1093px 405px rgb(240, 234, 234),
+    1140px 927px rgb(240, 234, 234), 130px 529px rgb(240, 234, 234), 33px 1980px rgb(240, 234, 234), 1147px 1663px rgb(240, 234, 234),
+    1616px 1436px rgb(240, 234, 234), 528px 710px rgb(240, 234, 234), 798px 1100px rgb(240, 234, 234), 505px 1480px rgb(240, 234, 234),
+    899px 641px rgb(240, 234, 234), 1909px 1949px rgb(240, 234, 234), 1311px 964px rgb(240, 234, 234), 979px 1301px rgb(240, 234, 234),
+    1393px 969px rgb(240, 234, 234), 1793px 1886px rgb(240, 234, 234), 292px 357px rgb(240, 234, 234), 1196px 1718px rgb(240, 234, 234),
+    1290px 1994px rgb(240, 234, 234), 537px 1973px rgb(240, 234, 234), 1181px 1674px rgb(240, 234, 234),
+    1740px 1566px rgb(240, 234, 234), 1307px 265px rgb(240, 234, 234), 922px 522px rgb(240, 234, 234), 1892px 472px rgb(240, 234, 234),
+    384px 1746px rgb(240, 234, 234), 392px 1098px rgb(240, 234, 234), 647px 548px rgb(240, 234, 234), 390px 1498px rgb(240, 234, 234),
+    1246px 138px rgb(240, 234, 234), 730px 876px rgb(240, 234, 234), 192px 1472px rgb(240, 234, 234), 1790px 1789px rgb(240, 234, 234),
+    928px 311px rgb(240, 234, 234), 1253px 1647px rgb(240, 234, 234), 747px 1921px rgb(240, 234, 234), 1561px 1025px rgb(240, 234, 234),
+    1533px 1292px rgb(240, 234, 234), 1985px 195px rgb(240, 234, 234), 728px 729px rgb(240, 234, 234), 1712px 1936px rgb(240, 234, 234),
+    512px 1717px rgb(240, 234, 234), 1528px 483px rgb(240, 234, 234), 313px 1642px rgb(240, 234, 234), 281px 1849px rgb(240, 234, 234),
+    1212px 799px rgb(240, 234, 234), 435px 1191px rgb(240, 234, 234), 1422px 611px rgb(240, 234, 234), 1718px 1964px rgb(240, 234, 234),
+    411px 944px rgb(240, 234, 234), 210px 636px rgb(240, 234, 234), 1502px 1295px rgb(240, 234, 234), 1434px 349px rgb(240, 234, 234),
+    769px 60px rgb(240, 234, 234), 747px 1053px rgb(240, 234, 234), 789px 504px rgb(240, 234, 234), 1436px 1264px rgb(240, 234, 234),
+    1893px 1225px rgb(240, 234, 234), 1394px 1788px rgb(240, 234, 234), 1108px 1317px rgb(240, 234, 234),
+    1673px 1395px rgb(240, 234, 234), 854px 1010px rgb(240, 234, 234), 1705px 80px rgb(240, 234, 234), 1858px 148px rgb(240, 234, 234),
+    1729px 344px rgb(240, 234, 234), 1388px 664px rgb(240, 234, 234), 895px 406px rgb(240, 234, 234), 1479px 157px rgb(240, 234, 234),
+    1441px 1157px rgb(240, 234, 234), 552px 1900px rgb(240, 234, 234), 516px 364px rgb(240, 234, 234), 1647px 189px rgb(240, 234, 234),
+    1427px 1071px rgb(240, 234, 234), 785px 729px rgb(240, 234, 234), 1080px 1710px rgb(240, 234, 234), 504px 204px rgb(240, 234, 234),
+    1177px 1622px rgb(240, 234, 234), 657px 34px rgb(240, 234, 234), 1296px 1099px rgb(240, 234, 234), 248px 180px rgb(240, 234, 234),
+    1212px 1568px rgb(240, 234, 234), 667px 1562px rgb(240, 234, 234), 695px 841px rgb(240, 234, 234), 1608px 1247px rgb(240, 234, 234),
+    751px 882px rgb(240, 234, 234), 87px 167px rgb(240, 234, 234), 607px 1368px rgb(240, 234, 234), 1363px 1203px rgb(240, 234, 234),
+    1836px 317px rgb(240, 234, 234), 1668px 1703px rgb(240, 234, 234), 830px 1154px rgb(240, 234, 234), 1721px 1398px rgb(240, 234, 234),
+    1601px 1280px rgb(240, 234, 234), 976px 874px rgb(240, 234, 234), 1743px 254px rgb(240, 234, 234), 1020px 1815px rgb(240, 234, 234),
+    1670px 1766px rgb(240, 234, 234), 1890px 735px rgb(240, 234, 234), 1379px 136px rgb(240, 234, 234), 1864px 695px rgb(240, 234, 234),
+    206px 965px rgb(240, 234, 234), 1404px 1932px rgb(240, 234, 234), 1923px 1360px rgb(240, 234, 234), 247px 682px rgb(240, 234, 234),
+    519px 1708px rgb(240, 234, 234), 645px 750px rgb(240, 234, 234), 1164px 1204px rgb(240, 234, 234), 834px 323px rgb(240, 234, 234),
+    172px 1350px rgb(240, 234, 234), 213px 972px rgb(240, 234, 234), 1837px 190px rgb(240, 234, 234), 285px 1806px rgb(240, 234, 234),
+    1047px 1299px rgb(240, 234, 234), 1548px 825px rgb(240, 234, 234), 1730px 324px rgb(240, 234, 234), 1346px 1909px rgb(240, 234, 234),
+    772px 270px rgb(240, 234, 234), 345px 1190px rgb(240, 234, 234), 478px 1433px rgb(240, 234, 234), 1479px 25px rgb(240, 234, 234);   
+}
+
+#stars2 {
+    width: 1px;
+    height: 2px;
+    background: transparent;
+    animation: 1s infinite linear;
+    box-shadow:     1103px 1238px rgb(240, 234, 234), 428px 1993px rgb(240, 234, 234), 355px 570px rgb(240, 234, 234), 977px 1836px rgb(240, 234, 234),
+    1395px 1092px rgb(240, 234, 234), 276px 913px rgb(240, 234, 234), 1743px 656px rgb(240, 234, 234), 773px 502px rgb(240, 228, 228),
+    1686px 1322px rgb(240, 234, 234), 1516px 1945px rgb(240, 234, 234), 1334px 501px rgb(240, 234, 234), 266px 156px rgb(199, 192, 192),
+    455px 655px rgb(240, 234, 234), 798px 72px rgb(240, 234, 234), 1059px 1259px rgb(240, 234, 234), 1402px 1687px rgb(240, 234, 234),
+    236px 1329px rgb(240, 234, 234), 1455px 786px rgb(240, 234, 234), 146px 1228px rgb(240, 234, 234), 1851px 823px rgb(240, 234, 234),
+    1062px 100px rgb(240, 234, 234), 1220px 953px rgb(240, 234, 234), 20px 1826px rgb(240, 234, 234), 36px 1063px rgb(240, 234, 234),
+    1525px 338px rgb(240, 234, 234), 790px 1521px rgb(240, 234, 234), 741px 1099px rgb(240, 234, 234), 288px 1489px rgb(240, 234, 234),
+    700px 1060px rgb(240, 234, 234), 390px 1071px rgb(240, 234, 234), 411px 1036px rgb(240, 234, 234), 1853px 1072px rgb(240, 234, 234),
+    1446px 1085px rgb(240, 234, 234), 1164px 874px rgb(240, 234, 234), 924px 925px rgb(240, 234, 234), 291px 271px rgb(240, 234, 234),
+    1257px 1964px rgb(240, 234, 234), 1580px 1352px rgb(240, 234, 234), 1507px 1216px rgb(240, 234, 234), 211px 956px rgb(240, 234, 234),
+    985px 1195px rgb(240, 234, 234), 975px 1640px rgb(240, 234, 234), 518px 101px rgb(240, 234, 234), 663px 1395px rgb(240, 234, 234),
+    914px 532px rgb(240, 234, 234), 145px 1320px rgb(240, 234, 234), 69px 1397px rgb(240, 234, 234), 982px 523px rgb(240, 234, 234),
+    257px 725px rgb(240, 234, 234), 1599px 831px rgb(240, 234, 234), 1636px 1513px rgb(240, 234, 234), 1250px 1158px rgb(240, 234, 234),
+    1132px 604px rgb(240, 234, 234), 183px 102px rgb(240, 234, 234), 1057px 318px rgb(240, 234, 234), 1247px 1835px rgb(240, 234, 234),
+    1983px 1110px rgb(240, 234, 234), 1077px 1455px rgb(240, 234, 234), 921px 1770px rgb(240, 234, 234), 806px 1350px rgb(240, 234, 234),
+    1938px 1992px rgb(240, 234, 234), 855px 1260px rgb(240, 234, 234), 902px 1345px rgb(240, 234, 234), 658px 1908px rgb(240, 234, 234),
+    1845px 679px rgb(240, 234, 234), 712px 1482px rgb(240, 234, 234), 595px 950px rgb(240, 234, 234), 1784px 1992px rgb(240, 234, 234),
+    1847px 1785px rgb(240, 234, 234), 691px 1004px rgb(240, 234, 234), 175px 1179px rgb(240, 234, 234), 1666px 1911px rgb(240, 234, 234),
+    41px 61px rgb(240, 234, 234), 971px 1080px rgb(240, 234, 234), 1830px 1450px rgb(240, 234, 234), 1351px 1518px rgb(240, 234, 234),
+    1257px 99px rgb(240, 234, 234), 1395px 1498px rgb(240, 234, 234), 1117px 252px rgb(240, 234, 234), 1779px 597px rgb(240, 234, 234),
+    1346px 729px rgb(240, 234, 234), 1108px 1144px rgb(240, 234, 234), 402px 691px rgb(240, 234, 234), 72px 496px rgb(240, 234, 234),
+    1673px 1604px rgb(240, 234, 234), 1497px 974px rgb(240, 234, 234), 1865px 1664px rgb(240, 234, 234), 88px 806px rgb(240, 234, 234),
+    918px 77px rgb(240, 234, 234), 244px 1118px rgb(240, 234, 234), 256px 1820px rgb(240, 234, 234), 1851px 1840px rgb(240, 234, 234),
+    605px 1851px rgb(240, 234, 234), 634px 383px rgb(240, 234, 234), 865px 37px rgb(240, 234, 234), 943px 1024px rgb(240, 234, 234),
+    1951px 177px rgb(240, 234, 234), 1097px 523px rgb(240, 234, 234), 985px 1700px rgb(240, 234, 234), 1243px 122px rgb(240, 234, 234),
+    768px 1070px rgb(240, 234, 234), 468px 194px rgb(240, 234, 234), 320px 1867px rgb(240, 234, 234), 1850px 185px rgb(240, 234, 234),
+    380px 1616px rgb(240, 234, 234), 468px 1294px rgb(240, 234, 234), 1122px 1743px rgb(240, 234, 234), 884px 299px rgb(240, 234, 234),
+    1300px 1917px rgb(240, 234, 234), 1860px 396px rgb(240, 234, 234), 1270px 990px rgb(240, 234, 234), 529px 733px rgb(240, 234, 234),
+    1975px 1347px rgb(240, 234, 234), 1885px 685px rgb(240, 234, 234), 226px 506px rgb(240, 234, 234), 651px 878px rgb(240, 234, 234),
+    1323px 680px rgb(240, 234, 234), 1284px 680px rgb(240, 234, 234), 238px 1967px rgb(240, 234, 234), 911px 174px rgb(240, 234, 234),
+    1111px 521px rgb(240, 234, 234), 1150px 85px rgb(240, 234, 234), 794px 502px rgb(240, 234, 234), 484px 1856px rgb(240, 234, 234),
+    1809px 368px rgb(240, 234, 234), 112px 953px rgb(240, 234, 234), 590px 1009px rgb(240, 234, 234), 1655px 311px rgb(240, 234, 234),
+    100px 1026px rgb(240, 234, 234), 1803px 352px rgb(240, 234, 234), 865px 306px rgb(240, 234, 234), 1077px 1019px rgb(240, 234, 234),
+    1335px 872px rgb(240, 234, 234), 1647px 1298px rgb(240, 234, 234), 1233px 1387px rgb(240, 234, 234), 698px 1036px rgb(240, 234, 234),
+    659px 1860px rgb(240, 234, 234), 388px 1412px rgb(240, 234, 234), 1212px 458px rgb(240, 234, 234), 755px 1468px rgb(240, 234, 234),
+    696px 1654px rgb(240, 234, 234), 1144px 60px rgb(240, 234, 234);
+}

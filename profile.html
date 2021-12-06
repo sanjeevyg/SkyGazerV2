@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="profile.js"></script>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Profile Page!</title>
+</head>
+<body>
+
+    <nav id="navigationBar">
+        <ul class="active">
+            <li id="home"><i class="fa fa-home" aria-hidden="true"></i>HOME </li>
+            <li id="profile"> <i class="fa fa-user-circle-o" aria-hidden="true"></i>PROFILE </li>          
+        </ul>
+        <ul class="sign-up">
+            <form class="search-form">
+                <input name="search" placeholder="Search Locations">
+                <input type="submit" value="Submit">
+            </form>
+            <li id="sign-out-button">SIGN OUT</li>
+        </ul>
+    </nav>
+
+    <section class="container-1">
+        <section class="body-frame">
+        
+                <section class="introduction">
+                    <h1>WELCOME SANJEEV!</h1>
+                    <br>
+                    <p>The San Diego Loyal walked off the field in protest Wednesday night, saying a Phoenix Rising player used an anti-gay slur directed at midfielder Collin Martin in the first half of their USL Championship match.
+                    </p>   
+                </section>
+
+                    
+                <section class="sun-moon-info">
+                    <div class="pop-up" id="pop">
+                        <div class="pop-header">
+                            <div class="title"></div>
+                            <div class="close-button"><i class="fa fa-window-close-o" aria-hidden="true"></i></div>
+                        </div>
+                        <br>
+                        <div class="pop-body"></div>
+                    </div>       
+                </section> 
+        </section>
+        <div class="container-2">
+            <div><img src="data:image/jpeg;base64,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"></div>
+            <div><img src="https://iso.500px.com/wp-content/uploads/2016/09/stock-photo-148347109.jpg"></div>
+            <div><img src="https://images.unsplash.com/photo-1495567720989-cebdbdd97913?ixlib=rb-1.2.1&w=1000&q=80"></div>
+            <div><img src="https://cdn.naturettl.com/wp-content/uploads/2019/08/30184905/Photographing-Sunrises-and-Sunsets-3-900x675.jpg"></div>
+            <div><img src="https://www.colesclassroom.com/wp-content/uploads/2018/06/heather-emond-313088-unsplash-800x533.jpg"></div>
+        </div>
+    </section>
+</body>
+</html>

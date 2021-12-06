@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Index Page!</title>
+</head>
+<body>
+
+    <nav id="navigationBar">
+        <ul class="active">
+            <li id="home"><i class="fa fa-home" aria-hidden="true"></i>HOME </li>
+            <li id="profile-tab"> <i class="fa fa-user-circle-o" aria-hidden="true"></i>PROFILE </li>
+            <li id="sign-up-list"> <i class="fa fa-user-plus" aria-hidden="true"></i>SIGN UP 
+                <div class="signup-form-container">
+                    <form id="new-account">
+                        <input name="name" type="text" placeholder="name"/>
+                        <input name="username" type="text" placeholder="username"/>
+                        <input name="email" type="text" placeholder="email"/>
+                        <input name="password" type="password" placeholder="password"/>
+                        <input type="submit" value="Create New Account">   
+                    </form>
+                </div>
+            </li>
+            <li id="login-list"><i class="fa fa-sign-in" aria-hidden="true"></i>SIGN IN 
+                <div class="login-form-container">
+                    <form id="login-user"> 
+                        <input name="username" type="text" placeholder="username"/>
+                        <input name="password" type="password" placeholder="password"/>
+                        <button id="login-button">Login</button>  
+                    </form> 
+                </div>
+            </li>   
+            <li id="contact"><i class="fa fa-compress" aria-hidden="true"></i>CONTACT </li>   
+              
+        </ul>
+        <ul class="sign-up">
+            <li id="sign-out-form">SIGN OUT</li>
+            <form class="search-form">
+                <input name="search" placeholder="Search Planets">
+                <input type="submit" value="Submit">
+            </form>
+        </ul>
+    </nav>
+    <section class="body-frame">
+        <section class="planets-body">
+            <section class="introduction">
+                <div id="log-in-popup">Please Log In!</div>
+                <h1>WELCOME TO SKYGAZER HOMEPAGE!</h1>
+                <br>
+                <p>The San Diego Loyal walked off the field in protest Wednesday night, saying a Phoenix Rising player used an anti-gay slur directed at midfielder Collin Martin in the first half of their USL Championship match.
+                </p>
+
+                <br>
+                <div id="nasa-daily-video"></div>
+            </section>
+
+            
+            <section class="planet-info">
+                <div class="pop-up" id="pop">
+                    <div class="pop-header">
+                        <div class="title"></div>
+                        <div class="close-button"><i class="fa fa-window-close-o" aria-hidden="true"></i></div>
+                    </div>
+                    <br>
+                    <div class="pop-body"></div>
+                </div>       
+            </section>
+
+        </section>
+
+        <seciton class="planet-link">
+            <section id="planet-group-1">
+                <div id="mercury-div">MERCURY</div>
+                <div  id="venus-div">VENUS</div>
+                <div  id="earth-div">EARTH</div>
+                <div id="mars-div">MARS</div>
+                <div id="jupiter-div">JUPIITER</div>
+                <div id="saturn-div">SATURN</div>
+                <div  id="uranus-div">URANUS</div>
+                <div  id="neptune-div">NEPTUNE</div>
+                <div id="pluto-div">PLUTO</div>
+            </section>
+            <!-- <section id="planet-group-2">
+               
+            </section> -->
+        </seciton>
+    </section>
+
+   <section>
+       <div class="star stars" id="star-container">
+           <div id="stars1"></div>
+           <div id="stars2"></div>
+       </div>
+       <div class="star sun" id="sun-1"></div>
+       <div class="planet mercury" id="mercury-1"></div>
+       <div class="orbit orbit-mercury"></div>
+       <div class="planet venus" id="venus-1"></div>
+       <div class="orbit orbit-venus"></div>
+       <div class="planet earth" id="earth-1">
+           <!-- <button class="earth-button"></button> -->
+            <div class="moon-orbit", id="moon"></div>
+       </div>
+       <div class="orbit orbit-earth"></div>
+       <div class="planet mars" id="mars-1">
+         <div class="moon-orbit" id="mars-moon1"></div>
+         <div class="moon-orbit" id="mars-moon2"></div>
+       </div>
+       <div class="orbit orbit-mars"></div>
+       <div class="planet jupiter" id="jupiter-1">
+            <div class="moon-orbit" id="jupiter-moon1"></div>
+            <div class="moon-orbit" id="jupiter-moon2"></div>
+            <div class="moon-orbit" id="jupiter-moon3"></div>
+            <div class="moon-orbit" id="jupiter-moon4"></div>
+       </div>
+       <div class="orbit orbit-jupiter"></div>
+       <div class="orbit orbit-asteroid"> </div>
+           <div class="orbit asteroid1"></div>
+           <div class="orbit asteroid2"></div>
+           <div class="orbit asteroid3"></div>
+           <div class="orbit asteroid4"></div>
+           <div class="orbit asteroid5"></div>
+           <div class="orbit asteroid6"></div>
+           <div class="orbit asteroid7"></div>
+           <div class="orbit asteroid8"></div>
+           <div class="orbit asteroid9"></div>
+           <div class="orbit asteroid10"></div>
+           <div class="orbit asteroid11"></div>
+           <div class="orbit asteroid12"></div>
+           <div class="orbit asteroid13"></div>
+           <div class="orbit asteroid14"></div>
+           <div class="orbit asteroid16"></div>
+           <div class="orbit asteroid17"></div>
+           <div class="orbit asteroid18"></div>
+           <div class="orbit asteroid19"></div>
+           <div class="orbit asteroid20"></div>
+           <div class="orbit asteroid21"></div>
+           <div class="orbit asteroid22"></div>
+           <div class="orbit asteroid23"></div>
+           <div class="orbit asteroid24"></div>
+           <div class="orbit asteroid25"></div>
+           <div class="orbit asteroid26"></div>
+           <div class="orbit asteroid27"></div>
+           <div class="orbit asteroid28"></div>
+           <div class="orbit asteroid29"></div>
+           <div class="orbit asteroid30"></div>
+       <div class="planet saturn" id="saturn-1"></div>
+       <div class="orbit orbit-saturn"></div>
+       <div class="planet uranus" id="uranus-1">
+           <div class="moon-orbit" id="uranus-moon1"></div>
+           <div class="moon-orbit" id="uranus-moon2"></div>
+           <div class="moon-orbit" id="uranus-moon3"></div>
+       </div>
+       <div class="orbit orbit-uranus"></div>
+       <div class="planet neptune" id="neptune-1">
+          <div class="moon-orbit" id="neptune-moon1"></div>
+          <div class="moon-orbit" id="neptune-moon2"></div>
+       </div>
+       <div class="orbit orbit-neptune"></div>
+       <div class="planet pluto" id="pluto-1"></div>
+       <div class="orbit orbit-pluto"></div>
+   </section>
+
+
+    </body>
+</html>
