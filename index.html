@@ -21,7 +21,7 @@
                         <input name="username" type="text" placeholder="username"/>
                         <input name="email" type="text" placeholder="email"/>
                         <input name="password" type="password" placeholder="password"/>
-                        <input type="submit" value="Create New Account">   
+                        <input type="submit" class="submitButton" value="Create New Account">   
                     </form>
                 </div>
             </li>
@@ -40,8 +40,10 @@
         <ul class="sign-up">
             <li id="sign-out-form">SIGN OUT</li>
             <form class="search-form">
-                <input name="search" placeholder="Search Planets">
-                <input type="submit" value="Submit">
+                <form class="search-form">
+                    <input name="search" id="search-form-1" size="19" placeholder="Search Planets">
+                    <button type="submit" class="search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
             </form>
         </ul>
     </nav>
@@ -49,13 +51,15 @@
         <section class="planets-body">
             <section class="introduction">
                 <div id="log-in-popup">Please Log In!</div>
-                <h1>WELCOME TO SKYGAZER HOMEPAGE!</h1>
-                <br>
-                <p>The San Diego Loyal walked off the field in protest Wednesday night, saying a Phoenix Rising player used an anti-gay slur directed at midfielder Collin Martin in the first half of their USL Championship match.
-                </p>
-
-                <br>
-                <div id="nasa-daily-video"></div>
+                <div class="image-section">
+                    <div>
+                        <h1>WELCOME TO SKYGAZER !</h1>
+                    </div>
+                    <div id="nasa-image-link"></div>
+                    <div>
+                        <h3>NASA IMAGE OF THE DAY</h3>
+                    </div>
+                </div>
             </section>
 
             

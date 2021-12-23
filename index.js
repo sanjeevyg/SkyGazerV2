@@ -28,7 +28,7 @@ const saturnButton1 = document.querySelector("#saturn-div")
 const plutoButton1 = document.querySelector("#pluto-div")
 const sunButton1 = document.querySelector("#sun-div")
 
-const nasaLink = document.querySelector("#nasa-daily-video")
+const nasaImageLink = document.querySelector("#nasa-image-link")
 
 const astroApiKey = "b17e8b59f8924d6585b40d01141a04b3"
 const nasaApiKey = "LgC3ecRJ9ybPzqQJc5K9cxwBc0Xa7RLnFGwGqMXj"
@@ -76,6 +76,8 @@ if(token) {
 } else {
     showNavElement()
 }
+
+
 // .........................................................................................
 const profilePopUpTab = document.querySelector("#log-in-popup") 
 const profileTab = document.querySelector("#profile-tab") 
@@ -97,7 +99,6 @@ function handleProfile() {
             })
     })}
 }
-
 
 function removePopUP() {
     profilePopUpTab.style.transform = "scale(0)"
@@ -198,41 +199,26 @@ function logout() {
     showNavElement()
 }
 
-
-
-
 function nasaVideo() {
     fetch(`${nasaBaseURL}${nasaApiKey}`)
         .then(response => response.json())
         .then(result => { 
             if (result.code == "404") {
                 const image = document.createElement("img")
-                const div = document.createElement("div")
-
                 image.src = errorImageURL
-                div.innerText = "IMAGE OF THE DAY"
-                div.classList.add("nasa-image")
-                
-                nasaLink.append(image, div)
-                
+                nasaImageLink.appendChild(image)
             } else if (result.media_type == "image") {
                 const image = document.createElement("img")
-                const div = document.createElement("div")
-
                 image.src = result.url
-                div.innerText = "IMAGE OF THE DAY"
-                div.classList.add("nasa-image")
-
-                nasaLink.append(image, div)
+                nasaImageLink.appendChild(image)
             } else {
                 console.log(result)
                 const video = document.createElement("iframe")
                 video.width = "400"
                 video.height = "400"
-
                 video.src = result.url 
                 console.log(video.src)      
-                nasaLink.appendChild(video)
+                nasaImageLink.appendChild(video)
             }
     })
 }
