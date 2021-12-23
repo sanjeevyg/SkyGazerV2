@@ -113,7 +113,6 @@ function removeNavElement() {
     const signUpList = document.querySelector("#sign-up-list")
     const logInList = document.querySelector("#login-list")
     const contact = document.querySelector("#contact")
-    // const contact = document.querySelector("#contact")
     
     signUpList.style.transform = "scale(0)"
     logInList.style.transform = "scale(0)"
@@ -305,7 +304,8 @@ function planetData(event) {
         planet = "sun";
         break;
     }
-    getPlanetInfo(planet)  
+    getPlanetInfo(planet)
+    getBackground()  
 }
 
 function searchPlanet(event){
@@ -382,5 +382,15 @@ function getPlanetInfo(planet) {
             planetC.style.transform = "scale(0)"
         }
     })
+    
+}
+
+const getBackground = () => {
+    const popB = document.getElementById("popup-background")
+    popB.style.transform = "scale(1)"
+    closeButton.addEventListener("click", closeBackground)
+    function closeBackground() {
+        popB.style.transform = "scale(0)"
+    }
 }
 

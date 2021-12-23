@@ -187,9 +187,22 @@ nav#navigationBar ul li {
 .pop-up {
     position: fixed;
     right: 3vw;
-    z-index: 10;
+    background: rgb(236, 239, 241, .07);
+    padding: 1rem;
+    z-index: 1000;
     transform: scale(0);
 }
+
+#popup-background {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+    background-color: rgba(73, 70, 70, 0.1);
+    transform: scale(0);
+}
+
 .pop-header {
     display: flex;
     justify-content: space-between;
