@@ -77,11 +77,9 @@ if(token) {
     showNavElement()
 }
 
-
 // .........................................................................................
 const profilePopUpTab = document.querySelector("#log-in-popup") 
 const profileTab = document.querySelector("#profile-tab") 
-
 
 profileTab.addEventListener("click", handleProfile)
 
@@ -104,10 +102,7 @@ function removePopUP() {
     profilePopUpTab.style.transform = "scale(0)"
 }
 
-
 // ...........................................................................................
-
-
 
 function removeNavElement() {
     const signUpList = document.querySelector("#sign-up-list")
@@ -216,7 +211,6 @@ function nasaVideo() {
                 video.width = "400"
                 video.height = "400"
                 video.src = result.url 
-                console.log(video.src)      
                 nasaImageLink.appendChild(video)
             }
     })

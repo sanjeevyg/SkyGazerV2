@@ -14,7 +14,6 @@ body {
 }
 
 nav {
-    /* background: #888E96; */
     position: relative;
     text-align: left;
     font-family: De-Valencia;
@@ -199,7 +198,7 @@ nav#navigationBar ul li {
     height: 100vh;
     width: 100vw;
     z-index: 999;
-    background-color: rgba(73, 70, 70, 0.1);
+    background-color: rgba(73, 70, 70, 0.09);
     transform: scale(0);
 }
 
@@ -272,8 +271,8 @@ nav#navigationBar ul li {
      left: 3vw;
      margin-top: 50px;
      margin-bottom: 30px;
-     width: auto;
-     height: 25vw;
+     width: 21vw;
+     height: auto;
      border: 1px solid rgb(155, 151, 151);
      box-shadow: 0 0 10px 0px rgba(126, 117, 117, 0.5)
  }
