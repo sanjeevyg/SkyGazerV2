@@ -134,6 +134,29 @@ nav#navigationBar ul li {
      font-size: 15px;
  }
 
+ #sign-in-complete {
+     position: fixed;
+    background: grey;
+    padding: 20px;
+    top: 10vh;
+    left: 23vw;
+    transform: scale(0);
+    text-align: center;
+    font-size: 15px;
+}
+
+#log-in-error-popup {
+    position: fixed;
+    background: grey;
+    padding: 20px;
+    top: 10vh;
+    left: 33vw;
+    transform: scale(0);
+    text-align: center;
+    font-size: 15px;
+}
+
+
  input[type="submit" i] {
      padding-left: 3px;
      padding-right: 3px;
@@ -198,6 +221,7 @@ nav#navigationBar ul li {
     z-index: 1000;
     transform: scale(0);
 }
+
 
 #popup-background {
     position: fixed;

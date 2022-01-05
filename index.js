@@ -87,7 +87,7 @@ profileTab.addEventListener("click", handleProfile)
 function handleProfile() {
     if (!token) {
         profilePopUpTab.style.transform = "scale(1)"    
-        profilePopUpTab.addEventListener("click", removePopUP)       
+        const myTimeout = setTimeout(removePopUP, 3000);
     } else {
         window.location.replace('http://localhost:3000/profile.html')
   }
@@ -121,6 +121,8 @@ function showNavElement() {
     signOutButton.style.transform = "scale(0)"
 }
 
+const signUpPopUp = document.querySelector("#sign-in-complete") 
+
 function signUp(event) {
     event.preventDefault()
     const formData = new FormData(event.target)
@@ -142,13 +144,20 @@ function signUp(event) {
         }, 
         body: JSON.stringify({user: newUser})
     }).then(response => response.json())
-    .then(result => console.log(result))
+    .then(result => {
+        console.log(result)
+        signUpPopUp.style.transform = "scale(1)"
+        const myTimeout = setTimeout(removesignupPopUP, 3000);
+    })
 }
+
+function  removesignupPopUP() {
+    signUpPopUp.style.transform = "scale(0)"
+}
+
 
 function login(event) {
     event.preventDefault()
-
-    // console.log("I am clicked!")
     const formData = new FormData(loginForm)
     const username = formData.get("username")
     const password = formData.get("password")
@@ -165,13 +174,28 @@ function login(event) {
         body: JSON.stringify({user: newUser})
     }).then(response => response.json())
     .then(result =>  { 
-        localStorage.setItem("token", result.token)
-        console.log(result.token)
+        localStorage.setItem("token", result.token) 
         window.location.replace('http://localhost:3000/profile.html')
     }).catch(error => {
         console.error(error.message)
     })  
+    const myTimout = setTimeout(loginErrorPopUpf, 1500)
 }
+
+const loginErrorPopUp = document.querySelector("#log-in-error-popup") 
+
+function loginErrorPopUpf() {
+    if (!token) {
+        loginErrorPopUp.style.transform = "scale(1)"
+        const myTimeout = setTimeout(removeloginPopUP, 3000);
+    }
+}
+
+
+function removeloginPopUP() {
+    loginErrorPopUp.style.transform = "scale(0)"
+}
+
 
 function logout() {
     localStorage.removeItem("token")
