@@ -118,6 +118,8 @@ nav#navigationBar ul li {
      display: flex;
      justify-content: space-between;
      transform: scale(0);
+     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    
  }
  .pop-header {
      display: flex;
@@ -125,7 +127,7 @@ nav#navigationBar ul li {
      padding-bottom: 20px;
      text-align: center;
      padding-right: 50px;
-     background: grey;
+     background: rgb(44, 33, 33);
     }
     
  .pop-body {
@@ -143,6 +145,7 @@ nav#navigationBar ul li {
 
  .close-button {
      cursor: pointer;
+     color: white;
  }
 
  /* ...................................................................... */
