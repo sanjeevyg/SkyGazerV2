@@ -7,7 +7,7 @@ const homePage = document.querySelector("#home")
 homePage.addEventListener("click", handleHome)
 
 function handleHome() {
-    window.location.replace(`http://localhost:3001/index.html`)
+    window.location.replace(`http://localhost:3000/index.html`)
 }
 
 const signOutButton = document.querySelector("#sign-out-button")
@@ -15,7 +15,7 @@ console.log(signOutButton)
 signOutButton.addEventListener("click", logout)
 function logout() {
     localStorage.removeItem("token")
-    window.location.replace(`http://localhost:3001/index.html`)
+    window.location.replace(`http://localhost:3000/index.html`)
     showNavElement()
 }
 
@@ -41,6 +41,7 @@ function getLocation(event){
 
 
 const closeButton = document.querySelector(".fa-window-close-o")
+
 function getSearchInfo(search) {
 
     const planetC = document.querySelector("#pop")

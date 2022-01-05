@@ -38,7 +38,7 @@ const planetBaseURL = "https://api.le-systeme-solaire.net/rest/bodies"
 const nasaBaseURL = "https://api.nasa.gov/planetary/apod?api_key="
 
 
-const baseURL = "http://localhost:3000"
+const baseURL = "http://localhost:4000"
 let token = localStorage.token
 console.log(token)
 
@@ -78,6 +78,7 @@ if(token) {
 }
 
 // .........................................................................................
+
 const profilePopUpTab = document.querySelector("#log-in-popup") 
 const profileTab = document.querySelector("#profile-tab") 
 
@@ -88,14 +89,8 @@ function handleProfile() {
         profilePopUpTab.style.transform = "scale(1)"    
         profilePopUpTab.addEventListener("click", removePopUP)       
     } else {
-        fetch(`${baseURL}/profiles`)
-        .then(response => response.json())
-        .then(profiles => {
-            profiles.map(profile => {console.log(profile)
-                
-                window.location.replace(`http://localhost:3001/profile.html`)
-            })
-    })}
+        window.location.replace('http://localhost:3000/profile.html')
+  }
 }
 
 function removePopUP() {
@@ -126,8 +121,6 @@ function showNavElement() {
     signOutButton.style.transform = "scale(0)"
 }
 
-
-
 function signUp(event) {
     event.preventDefault()
     const formData = new FormData(event.target)
@@ -154,8 +147,8 @@ function signUp(event) {
 
 function login(event) {
     event.preventDefault()
-    removeNavElement()
 
+    console.log("I am clicked!")
     const formData = new FormData(loginForm)
     const username = formData.get("username")
     const password = formData.get("password")
@@ -163,30 +156,21 @@ function login(event) {
         username: username, 
         password: password
     }
-    // location.reload()
 
     fetch(`${baseURL}/login`, {
         method: "POST", 
         headers: {
             "Content-type": "application/json", 
         }, 
-        body: JSON.stringify(newUser)
+        body: JSON.stringify({user: newUser})
     }).then(response => response.json())
     .then(result =>  { 
         localStorage.setItem("token", result.token)
-    })   
+        window.location.replace('http://localhost:3000/profile.html')
+    }).catch(error => {
+        console.error(error.message)
+    })  
 }
-
-// function authorizeUser(token) {
-//     fetch(`${baseURL}/profile`, {
-//         method: "GET",
-//         headers: {
-//             "content-type": "application/json",
-//             "Authorization": `Bearer ${token}`
-//         }
-//     }).then(response => response.json())
-//     .then(console.log)
-// }
 
 function logout() {
     localStorage.removeItem("token")
