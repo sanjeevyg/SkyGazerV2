@@ -87,7 +87,7 @@ profileTab.addEventListener("click", handleProfile)
 function handleProfile() {
     if (!token) {
         profilePopUpTab.style.transform = "scale(1)"    
-        const myTimeout = setTimeout(removePopUP, 3000);
+        const myTimeout = setTimeout(removePopUP, 2500);
     } else {
         window.location.replace('http://localhost:3000/profile.html')
   }
@@ -147,7 +147,7 @@ function signUp(event) {
     .then(result => {
         console.log(result)
         signUpPopUp.style.transform = "scale(1)"
-        const myTimeout = setTimeout(removesignupPopUP, 3000);
+        const myTimeout = setTimeout(removesignupPopUP, 2500);
     })
 }
 
@@ -187,7 +187,7 @@ const loginErrorPopUp = document.querySelector("#log-in-error-popup")
 function loginErrorPopUpf() {
     if (!token) {
         loginErrorPopUp.style.transform = "scale(1)"
-        const myTimeout = setTimeout(removeloginPopUP, 3000);
+        const myTimeout = setTimeout(removeloginPopUP, 2500);
     }
 }
 
