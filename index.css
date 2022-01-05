@@ -35,13 +35,11 @@ nav#navigationBar ul {
     text-decoration: underline;
 }
 
-
 .sign-up {
     display: inline-flex;
     list-style: none;
     color: White;
 }
-
 
 nav#navigationBar ul li {
     width: 120px;
@@ -196,6 +194,7 @@ nav#navigationBar ul li {
     right: 3vw;
     background: rgb(236, 239, 241, .07);
     padding: 1rem;
+    bottom: 17vh;
     z-index: 1000;
     transform: scale(0);
 }
@@ -232,7 +231,6 @@ nav#navigationBar ul li {
 /* ...................................................................... */
 
 .body-frame {
-    /* position: fixed; */
     left: 3vh;
     display: flex;
     flex-direction: column;
@@ -284,7 +282,6 @@ nav#navigationBar ul li {
      border: 1px solid rgb(155, 151, 151);
      box-shadow: 0 0 10px 0px rgba(126, 117, 117, 0.5)
  }
-
 
 .planet-link {
     position: fixed;
@@ -363,7 +360,6 @@ nav#navigationBar ul li {
 }
 
 #moon {
-    /* position: absolute; */
     --size: 3px;
     background: rgb(252, 251, 252);
     animation: moon 1.66s infinite linear;
@@ -376,14 +372,12 @@ nav#navigationBar ul li {
 }
 
 #mars-moon1 {
-    /* position: absolute; */
     --size: 2px;
     background: rgb(252, 251, 252);
     animation: mars-moon 1.66s infinite linear;
 }
 
 #mars-moon2 {
-    /* position: absolute; */
     --size: 2px;
     background: rgb(185, 103, 52);
     animation: mars-moon 1.2s infinite linear;
@@ -396,28 +390,24 @@ nav#navigationBar ul li {
 }
 
 #jupiter-moon1 {
-    /* position: absolute; */
     --size: 3px;
     background: rgb(251, 251, 252);
     animation: jupiter-moon 1.4s infinite linear;
 }
 
 #jupiter-moon2 {
-    /* position: absolute; */
     --size: 4px;
     background: rgb(86, 255, 255);
     animation: jupiter-moon 1.2s infinite linear;
 }
 
 #jupiter-moon3 {
-    /* position: absolute; */
     --size: 3px;
     background: rgb(255, 209, 109);
     animation: jupiter-moon .8s infinite linear;
 }
 
 #jupiter-moon4 {
-    /* position: absolute; */
     --size: 2px;
     background: rgb(255, 209, 109);
     animation: jupiter-moon 1s infinite linear;
@@ -438,9 +428,7 @@ nav#navigationBar ul li {
     width: 180%;
     height: 10%;
     border-top: 2px solid white;
-    /* border-top: 0; */
     border-radius: 50%;
-    /* transform: saturn translate(-50%, -50%); */
 }
 
 .uranus {
@@ -450,35 +438,30 @@ nav#navigationBar ul li {
 }
 
 #uranus-moon1 {
-    /* position: absolute; */
     --size: 2px;
     background: rgb(251, 251, 252);
     animation: uranus-moon .7s infinite linear;
 }
 
 #uranus-moon2 {
-    /* position: absolute; */
     --size: 1.5px;
     background: rgb(86, 255, 255);
     animation: uranus-moon .8s infinite linear;
 }
 
 #uranus-moon3 {
-    /* position: absolute; */
     --size: 2px;
     background: rgb(255, 209, 109);
     animation: uranus-moon .9s infinite linear;
 }
 
 #neptune-moon1 {
-    /* position: absolute; */
     --size: 2px;
     background: rgb(255, 209, 109);
     animation: neptune-moon 1.2s infinite linear;
 }
 
 #neptune-moon2 {
-    /* position: absolute; */
     --size: 2px;
     background: rgb(249, 41, 41);
     animation: neptune-moon 1.5s infinite linear;

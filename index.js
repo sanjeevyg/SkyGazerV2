@@ -148,7 +148,7 @@ function signUp(event) {
 function login(event) {
     event.preventDefault()
 
-    console.log("I am clicked!")
+    // console.log("I am clicked!")
     const formData = new FormData(loginForm)
     const username = formData.get("username")
     const password = formData.get("password")
@@ -166,6 +166,7 @@ function login(event) {
     }).then(response => response.json())
     .then(result =>  { 
         localStorage.setItem("token", result.token)
+        console.log(result.token)
         window.location.replace('http://localhost:3000/profile.html')
     }).catch(error => {
         console.error(error.message)

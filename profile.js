@@ -1,4 +1,5 @@
 
+
 let address = "colorado"
 const astroApiKey = "b17e8b59f8924d6585b40d01141a04b3"
 
@@ -11,7 +12,6 @@ function handleHome() {
 }
 
 const signOutButton = document.querySelector("#sign-out-button")
-console.log(signOutButton)
 signOutButton.addEventListener("click", logout)
 function logout() {
     localStorage.removeItem("token")
@@ -37,8 +37,8 @@ function getLocation(event){
     const search = formData.get("search")
 
     getSearchInfo(search)
+    getBackground()
 }
-
 
 const closeButton = document.querySelector(".fa-window-close-o")
 
@@ -55,7 +55,8 @@ function getSearchInfo(search) {
         planetC.style.transform = "scale(1)"
 
         const name = document.createElement("div")
-        name.innerText = `NAME: ${result.location.location.toUpperCase()}`
+        // name.innerText = `NAME: ${result.location.location.toUpperCase()}`
+        name.innerText = search
         console.log(name)
         titlePlanet.appendChild(name)
 
@@ -102,4 +103,14 @@ function getSearchInfo(search) {
             planetC.style.transform = "scale(0)"
         }
     })
+}
+
+
+const getBackground = () => {
+    const popB = document.getElementById("popup-background")
+    popB.style.transform = "scale(1)"
+    closeButton.addEventListener("click", closeBackground)
+    function closeBackground() {
+        popB.style.transform = "scale(0)"
+    }
 }
