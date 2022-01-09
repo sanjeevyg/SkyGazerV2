@@ -9,7 +9,6 @@ const homePage = document.querySelector("#home")
 homePage.addEventListener("click", handleHome)
 
 function handleHome() {
-    // window.location.replace(`http://localhost:3000/index.html`)
     window.location.replace(baseURL)
 }
 
@@ -17,7 +16,6 @@ const signOutButton = document.querySelector("#sign-out-button")
 signOutButton.addEventListener("click", logout)
 function logout() {
     localStorage.removeItem("token")
-    // window.location.replace(`http://localhost:3000/index.html`)
     window.location.replace(baseURL)
     showNavElement()
 }

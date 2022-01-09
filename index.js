@@ -38,7 +38,6 @@ const planetBaseURL = "https://api.le-systeme-solaire.net/rest/bodies"
 const nasaBaseURL = "https://api.nasa.gov/planetary/apod?api_key="
 
 
-// const baseURL = "http://localhost:4000"
 const baseURL = "https://sky-gazer-s.herokuapp.com"
 const skyGazerURL = "https://skygazeryg.web.app"
 
@@ -92,7 +91,6 @@ function handleProfile() {
         profilePopUpTab.style.transform = "scale(1)"    
         const myTimeout = setTimeout(removePopUP, 2500);
     } else {
-        // window.location.replace('http://localhost:3000/profile.html')
         window.location.replace(`${skyGazerURL}/profile.html`)
   }
 }
