@@ -2,7 +2,7 @@
 
 let address = "colorado"
 const astroApiKey = "b17e8b59f8924d6585b40d01141a04b3"
-const baseURL = "https://sky-gazer-s.herokuapp.com"
+const baseURL = "https://skygazeryg.web.app"
 
 const homePage = document.querySelector("#home")
 

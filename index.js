@@ -40,6 +40,8 @@ const nasaBaseURL = "https://api.nasa.gov/planetary/apod?api_key="
 
 // const baseURL = "http://localhost:4000"
 const baseURL = "https://sky-gazer-s.herokuapp.com"
+const skyGazerURL = "https://skygazeryg.web.app"
+
 let token = localStorage.token
 console.log(token)
 
@@ -91,7 +93,7 @@ function handleProfile() {
         const myTimeout = setTimeout(removePopUP, 2500);
     } else {
         // window.location.replace('http://localhost:3000/profile.html')
-        window.location.replace(`${baseURL}/profile.html`)
+        window.location.replace(`${skyGazerURL}/profile.html`)
   }
 }
 
@@ -177,7 +179,7 @@ function login(event) {
     }).then(response => response.json())
     .then(result =>  { 
         localStorage.setItem("token", result.token) 
-        window.location.replace(`${baseURL}/profile.html`)
+        window.location.replace(`${skyGazerURL}/profile.html`)
     }).catch(error => {
         console.error(error.message)
     })  
