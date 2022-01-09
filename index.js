@@ -90,7 +90,8 @@ function handleProfile() {
         profilePopUpTab.style.transform = "scale(1)"    
         const myTimeout = setTimeout(removePopUP, 2500);
     } else {
-        window.location.replace('http://localhost:3000/profile.html')
+        // window.location.replace('http://localhost:3000/profile.html')
+        window.location.replace(`${baseURL}/profile.html`)
   }
 }
 
@@ -176,7 +177,7 @@ function login(event) {
     }).then(response => response.json())
     .then(result =>  { 
         localStorage.setItem("token", result.token) 
-        window.location.replace('http://localhost:3000/profile.html')
+        window.location.replace(`${baseURL}/profile.html`)
     }).catch(error => {
         console.error(error.message)
     })  

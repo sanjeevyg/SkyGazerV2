@@ -2,20 +2,23 @@
 
 let address = "colorado"
 const astroApiKey = "b17e8b59f8924d6585b40d01141a04b3"
+const baseURL = "https://sky-gazer-s.herokuapp.com"
 
 const homePage = document.querySelector("#home")
 
 homePage.addEventListener("click", handleHome)
 
 function handleHome() {
-    window.location.replace(`http://localhost:3000/index.html`)
+    // window.location.replace(`http://localhost:3000/index.html`)
+    window.location.replace(baseURL)
 }
 
 const signOutButton = document.querySelector("#sign-out-button")
 signOutButton.addEventListener("click", logout)
 function logout() {
     localStorage.removeItem("token")
-    window.location.replace(`http://localhost:3000/index.html`)
+    // window.location.replace(`http://localhost:3000/index.html`)
+    window.location.replace(baseURL)
     showNavElement()
 }
 
