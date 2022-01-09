@@ -38,7 +38,8 @@ const planetBaseURL = "https://api.le-systeme-solaire.net/rest/bodies"
 const nasaBaseURL = "https://api.nasa.gov/planetary/apod?api_key="
 
 
-const baseURL = "http://localhost:4000"
+// const baseURL = "http://localhost:4000"
+const baseURL = "https://sky-gazer-s.herokuapp.com"
 let token = localStorage.token
 console.log(token)
 
