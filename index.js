@@ -151,6 +151,7 @@ function signUp(event) {
         signUpPopUp.style.transform = "scale(1)"
         const myTimeout = setTimeout(removesignupPopUP, 2500);
     })
+    signUpForm.reset()
 }
 
 function  removesignupPopUP() {
@@ -323,6 +324,7 @@ function searchPlanet(event){
 }
 
 function getPlanetInfo(planet) {
+    if(planet.length === 0) return
 
     const planetC = document.querySelector("#pop")
     const titlePlanet = document.querySelector(".pop-header")
@@ -332,6 +334,9 @@ function getPlanetInfo(planet) {
     .then(response => response.json())
     .then(result => { 
         console.log(result)
+        if(result) getBackground()  
+        searchPlanetForm.reset()
+
         planetC.style.transform = "scale(1)"
 
         const name = document.createElement("div")
@@ -387,7 +392,8 @@ function getPlanetInfo(planet) {
             planetC.style.transform = "scale(0)"
         }
     })
-    getBackground()  
+   
+   
     
 }
 
