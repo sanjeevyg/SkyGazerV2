@@ -392,9 +392,6 @@ function getPlanetInfo(planet) {
             planetC.style.transform = "scale(0)"
         }
     })
-   
-   
-    
 }
 
 const getBackground = () => {

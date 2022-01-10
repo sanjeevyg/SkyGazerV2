@@ -199,12 +199,15 @@ nav#navigationBar ul li {
     justify-content: center;
     align-items: center;
 }
+
 .planet:hover {
     cursor: pointer;
 }
+
 .sun:hover {
    cursor: pointer;
 }
+
 .planet-info {
    margin-top: 170px;
    font-family: De-Valencia;
@@ -1022,7 +1025,7 @@ nav#navigationBar ul li {
 
 .orbit-jupiter {
     --size: 340px;
-    border: 1px solid rgb(23, 51, 70);
+    border: 1px solid rgb(35, 62, 80);
 }
 
 
