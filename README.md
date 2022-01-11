@@ -27,7 +27,7 @@ lite-server
   
 
 ### Pending Features
-- Profile to load photos of the location on profile page of the user if location search-tool is used to fetch data about the location
+- Feature to load images of location on profile page of the user if search-tool is used to fetch data about the location
  
 
 
