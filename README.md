@@ -1,6 +1,6 @@
 # Sky Gazer
 
-![alt text](image.jpg)
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
 
 **An user interactive web app for solar system built with vanilla javascript, css, html and node.js.**
 
@@ -23,7 +23,7 @@ lite-server
 - User can fetch general data about any places like sunrise time, sunset time, monrise time, moonset time, etc once logged in using their username and password
 
 ### Credits
-  [Nasa Apis](https://api.nasa.gov)
+  [Nasa APIs](https://api.nasa.gov)
   
 
 ### Pending Features
