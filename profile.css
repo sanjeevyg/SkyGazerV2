@@ -102,7 +102,9 @@ nav#navigationBar ul li {
 
  .searchTitle {
      color: white;
-     background-color: tomato;
+     display: flex;
+     justify-content: center;
+     align-items: center;
  }
 
 /* ..................................................................... */
@@ -124,6 +126,7 @@ nav#navigationBar ul li {
      justify-content: space-between;
      transform: scale(0);
      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+     right: 13.5vw;
     
  }
  .pop-header {
@@ -132,7 +135,7 @@ nav#navigationBar ul li {
      padding-bottom: 20px;
      text-align: center;
      padding-right: 50px;
-     background: rgb(134, 19, 19);
+     background: rgb(44, 33, 33);
     }
     
  .pop-body {
@@ -140,7 +143,7 @@ nav#navigationBar ul li {
      height: 100px;
      font-size: 1.3rem;
      text-align: center;
-     background: rgb(134, 31, 31);
+     background: grey;
      display: flex;
      flex-direction: row;
      margin-right: 50px;

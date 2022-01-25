@@ -56,7 +56,6 @@ function getSearchInfo(search) {
         planetC.style.transform = "scale(1)"
 
         const name = document.createElement("div")
-        // name.innerText = `NAME: ${result.location.location.toUpperCase()}`
         name.innerText = search
         name.className = "searchTitle"
 

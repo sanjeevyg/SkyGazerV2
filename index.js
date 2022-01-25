@@ -91,7 +91,8 @@ function handleProfile() {
         profilePopUpTab.style.transform = "scale(1)"    
         const myTimeout = setTimeout(removePopUP, 2500);
     } else {
-        window.location.replace(`${skyGazerURL}/profile.html`)
+        // window.location.replace(`${skyGazerURL}/profile.html`)
+        window.location.replace(`http://localhost:3000/profile.html`)
   }
 }
 
