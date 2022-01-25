@@ -58,6 +58,8 @@ function getSearchInfo(search) {
         const name = document.createElement("div")
         // name.innerText = `NAME: ${result.location.location.toUpperCase()}`
         name.innerText = search
+        name.className = "searchTitle"
+
         console.log(name)
         titlePlanet.appendChild(name)
 
