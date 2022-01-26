@@ -20,20 +20,19 @@ function logout() {
     showNavElement()
 }
 
-function riseFallData() {
-    fetch(`https://api.ipgeolocation.io/astronomy?apiKey=${astroApiKey}&location=${address}`)
-        .then(response => response.json())
-        .then(result => console.log(result))
-}
+// function riseFallData() {
+//     fetch(`https://api.ipgeolocation.io/astronomy?apiKey=${astroApiKey}&location=${address}`)
+//         .then(response => response.json())
+//         .then(result => console.log(result))
+// }
 
-riseFallData()
+// riseFallData()
 
 const searchPlanetForm = document.querySelector(".search-form")
 searchPlanetForm.addEventListener("submit", getLocation)
 
 function getLocation(event){
     event.preventDefault()
-    console.log(event.target)
     const formData = new FormData(event.target)
     const search = formData.get("search")
 
@@ -52,43 +51,34 @@ function getSearchInfo(search) {
     fetch(`https://api.ipgeolocation.io/astronomy?apiKey=${astroApiKey}&location=${search}`)
     .then(response => response.json())
     .then(result => { 
-        console.log(result)
         planetC.style.transform = "scale(1)"
 
         const name = document.createElement("div")
         name.innerText = search
         name.className = "searchTitle"
 
-        console.log(name)
         titlePlanet.appendChild(name)
 
         const time = document.createElement("div")
         time.innerText = `TIME: ${result.current_time}`
-        console.log(time)
 
         const date = document.createElement("div")
         date.innerText = `DATE: ${result.date}`
-        console.log(date)
         
         const moonrise = document.createElement("div")
         moonrise.innerText = `MOONRISE TIME: ${result.moonrise}`
-        console.log(moonrise)
 
         const moonset = document.createElement("div")
         moonset.innerText = `MOONSET TIME: ${result.moonset}`
-        console.log(moonset)
 
         const sunrise = document.createElement("div")
         sunrise.innerText = `SUNRISE TIME: ${result.sunrise}`
-        console.log(sunrise)
 
         const sunset = document.createElement("div")
         sunset.innerText = `SUNSET TIME: ${result.sunset}`
-        console.log(sunset)
 
         const daylength = document.createElement("div")
         daylength.innerText = `DAY LENGTH: ${result.day_length}`
-        console.log(daylength)
 
         bodyPlanet.append(time, date, moonrise, moonset, sunrise, sunset, daylength)
 

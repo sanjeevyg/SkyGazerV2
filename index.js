@@ -42,7 +42,6 @@ const baseURL = "https://sky-gazer-s.herokuapp.com"
 const skyGazerURL = "https://skygazeryg.web.app"
 
 let token = localStorage.token
-console.log(token)
 
 signUpForm.addEventListener("submit", signUp)
 loginButton.addEventListener("click", login)
@@ -148,7 +147,6 @@ function signUp(event) {
         body: JSON.stringify({user: newUser})
     }).then(response => response.json())
     .then(result => {
-        console.log(result)
         signUpPopUp.style.transform = "scale(1)"
         const myTimeout = setTimeout(removesignupPopUP, 2500);
     })
@@ -219,7 +217,6 @@ function nasaVideo() {
                 image.src = result.url
                 nasaImageLink.appendChild(image)
             } else {
-                console.log(result)
                 const video = document.createElement("iframe")
                 video.width = "400"
                 video.height = "400"
@@ -317,7 +314,6 @@ function planetData(event) {
 
 function searchPlanet(event){
     event.preventDefault()
-    console.log(event.target)
     const formData = new FormData(event.target)
     const search = formData.get("search")
 
@@ -334,7 +330,6 @@ function getPlanetInfo(planet) {
     fetch(`${planetBaseURL}/${planet}`)
     .then(response => response.json())
     .then(result => { 
-        console.log(result)
         if(result) getBackground()  
         searchPlanetForm.reset()
 
