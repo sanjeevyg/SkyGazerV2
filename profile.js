@@ -20,14 +20,6 @@ function logout() {
     showNavElement()
 }
 
-// function riseFallData() {
-//     fetch(`https://api.ipgeolocation.io/astronomy?apiKey=${astroApiKey}&location=${address}`)
-//         .then(response => response.json())
-//         .then(result => console.log(result))
-// }
-
-// riseFallData()
-
 const searchPlanetForm = document.querySelector(".search-form")
 searchPlanetForm.addEventListener("submit", getLocation)
 
