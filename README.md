@@ -4,8 +4,6 @@
 
 **An user interactive web app about solar system built with vanilla javascript, css, html and node.js.**
 
-![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fsyogifse)
-
 ### Installation 
 From the command line: 
 ```bash 
