@@ -26,7 +26,13 @@ lite-server
 
 ### Pending Features
 - Feature to load images of location on profile page of the user if search-tool is used to fetch data about the location
- 
+
+
+### Contact
+<p align="left">
+  <a href="https://www.linkedin.com/in/sanjeevyogi/" target="blank"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"  alt="linkedin"   align="left" width="35" height="35"/>
+  <a href="https://twitter.com/syogifse" target="blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" alt="twitter" align="left" width="35" height="35"/>
+<p>
 
 
 
