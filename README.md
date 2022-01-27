@@ -1,6 +1,6 @@
 # Sky Gazer
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Screen Shot 2022-01-26 at 1 35 03 AM](https://user-images.githubusercontent.com/63537688/151409384-dfc1e7c0-9cb4-458f-9044-b05db5e91664.png)
 
 **An user interactive web app about solar system built with vanilla javascript, css, html and node.js.**
 
